@@ -1,0 +1,33 @@
+'''
+task 01
+'''
+
+a = 6
+b = 12
+print(a+b)
+
+c = input('Enter the integer number:')
+print('You have entered ', c)
+print('Type of entered variable is', type(c))
+print('-variable conversion in progress-')
+c = int(c)
+print('Type of entered variable is', type(c))
+
+
+'''
+task 02
+'''
+
+a = int(input('Enter the integer number:'))
+print('Rusukt of adding 2 to the entered number is: ', a+2)
+
+
+'''
+task 03
+'''
+
+age = int(input('Please provide your age:'))
+if age>=18:
+    print('Access Granted')
+else:
+    print('Access Denied! You can access the resourse only after 18')
