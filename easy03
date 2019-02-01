@@ -1,0 +1,54 @@
+'''
+# Задание - 1
+# Создайте функцию, принимающую на вход Имя, возраст и город проживания человека
+# Функция должна возвращать строку вида "Василий, 21 год(а), проживает в городе Москва"
+'''
+
+
+def personal_data(name, age, place):
+    print('{}, {} years old, lives in {}'.format(name, age, place))
+
+
+name = 'Ivan'
+age = 21
+place = 'Moscow'
+personal_data(name, age, place)
+
+
+'''
+# Задание - 2
+# Создайте функцию, принимающую на вход 3 числа, и возвращающую наибольшее из них
+'''
+
+#1st variant
+def my_compare(a, b, c):
+    if a > b and a > c:
+        max_value = a
+    elif b > a and b > c:
+        max_value = b
+    else:
+        max_value = c
+    return max_value
+
+a = -6
+b = -20
+c = 0
+y = my_compare(a,b,c)
+print(y)
+
+#2nd variant
+m_v = lambda a, b, c: max(a, b, c)
+print(m_v(a, b, c))
+
+
+'''
+# Задание - 3
+# Создайте функцию, принимающую неограниченное количество строковых аргументов,
+# верните самую длинную строку из полученных аргументов
+'''
+
+def longest(*args):
+    if len(arg) == max(len(arg) for arg in args, key=len): #отладить не получилось, но другого решения не придумалось(
+        return arg
+
+print(longest('apple', 'word', 'sunshine'))
