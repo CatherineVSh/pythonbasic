@@ -1,0 +1,52 @@
+'''
+# Задание-1:
+# Дан список, заполненный произвольными целыми числами.
+# Получить новый список, элементы которого будут
+# квадратами элементов исходного списка
+# [1, 2, 4, 0] --> [1, 4, 16, 0]
+'''
+
+import random
+
+# 1st variant
+
+source_list = [1, 2, 4, 0]
+new_list = []
+for item in source_list:
+        new_list.append(item ** 2)
+print(new_list)
+
+# 2nd variant
+
+new_list = [item ** 2 for item in source_list]
+print(new_list)
+
+'''
+# Задание-2:
+# Даны два списка фруктов.
+# Получить список фруктов, присутствующих в обоих исходных списках.
+'''
+
+list_1 = ['apple', 'orange', 'banana', 'passionfruit', 'pineapple', 'peach']
+list_2 = ['kiwi', 'pineapple', 'orange', 'pear', 'banana', 'grapefruit']
+new_list = []
+for item in list_1:
+    for fruit in list_2:
+        if item == fruit:
+            new_list.append(item)
+print(new_list)
+
+
+'''
+# Задание-3:
+# Дан список, заполненный произвольными числами.
+# Получить список из элементов исходного, удовлетворяющих следующим условиям:
+# + Элемент кратен 3
+# + Элемент положительный
+# + Элемент не кратен 4
+'''
+
+source_list = [random.randint(-50,50) for _ in range(20)]
+print(source_list)
+new_list = [item for item in source_list if item > 0 and item % 3 == 0 and item % 4 != 0]
+print(new_list)
