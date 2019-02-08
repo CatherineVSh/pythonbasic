@@ -47,10 +47,10 @@ while True:
     elif choice == 4:
         dir_to_create = input('Specify directory name you want to create: \n')
         try:
-            os.makedirs(dir_name)
-            print('Directory {} has been created'.format(dir_to_remove))
+            os.makedirs(dir_to_create)
+            print('Directory {} has been created'.format(dir_to_create))
         except Exception:
-            print('Directory {} could not be created'.format(dir_to_remove))
+            print('Directory {} could not be created'.format(dir_to_create))
     else:
         print('Your input is invalid.')
         break
