@@ -45,3 +45,11 @@ def copy_file():
     new_file = __file__ + '.copy'
     shutil.copy(__file__, new_file)
 
+
+'''
+Function definition for normal task
+'''
+
+def show_all_dir():
+    for element in os.listdir():
+        print(element)
